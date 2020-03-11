@@ -3,7 +3,7 @@ package cn.jeff.study.dubbodemoprovider;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;
 
-@Service(interfaceClass = HelloService.class, application = "${dubbo.application}", local = "true")
+@Service(interfaceClass = HelloService.class)
 @Component
 public class HelloServiceLocal implements HelloService {
 
