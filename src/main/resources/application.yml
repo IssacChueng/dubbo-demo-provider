@@ -1,0 +1,14 @@
+spring:
+  dubbo:
+    registry: zookeeper://127.0.0.1:2181
+    server: false
+    protocol:
+      serialization: fastjson
+  application:
+    name: dubbo-demo-provider
+dubbo:
+  application:
+    name: dubbo-demo
+    qos-enable: true
+server:
+  port: 8888
