@@ -1,9 +1,13 @@
 package cn.jeff.study.dubbodemoprovider;
 
 import org.apache.dubbo.config.annotation.Service;
+import org.springframework.core.io.DefaultResourceLoader;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.stream.Collectors;
 
 @Service(interfaceClass = HelloService.class)
@@ -14,18 +18,15 @@ public class HelloServiceLocal implements HelloService {
 
     Student student = new Student();
     {
-        File file = new File("/Users/jeff/Downloads/task.log");
-        try {
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line = bufferedReader.lines()
-                    .collect(Collectors.joining());
-            student.setName(line);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        ResourceLoader resourceLoader = new DefaultResourceLoader();
+        InputStream resourceAsStream = resourceLoader.getClassLoader()
+                .getResourceAsStream("33981411395957.txt");
+        BufferedReader bufferedReader =new BufferedReader( new InputStreamReader(resourceAsStream));
+        String lines = bufferedReader.lines()
+                .collect(Collectors.joining());
+        student.setName(lines);
         Teacher teacher = new Teacher();
-        teacher.setName("你");
+        teacher.setName(lines);
         student.setTeacher(teacher);
     }
 
