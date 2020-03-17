@@ -7,7 +7,6 @@ dubbo:
     qos-enable: true
   registry:
     address: zookeeper://127.0.0.1:2181
-  protocol:
-    serialization: hessian2
+
 server:
   port: 8888

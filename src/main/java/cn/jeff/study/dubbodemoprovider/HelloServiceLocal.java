@@ -10,7 +10,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.stream.Collectors;
 
-@Service(interfaceClass = HelloService.class)
+@Service(interfaceClass = HelloService.class, path = "hello")
 @Component
 public class HelloServiceLocal implements HelloService {
 
