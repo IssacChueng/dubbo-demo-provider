@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('pull') {
+        steps {
+            echo 'git pull'
+        }
+    }
     stage('build') {
       steps {
         sh 'mvn clean compile'
