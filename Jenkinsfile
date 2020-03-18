@@ -32,7 +32,7 @@ pipeline {
                     echo "关闭provider"
                     pwd
                     ls
-                    ssh peer1 "ls"
+                    ssh peer1 "pkill -f dubbo-demo-provider"
                     echo "传输jar"
                 '''
             }
