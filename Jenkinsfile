@@ -35,7 +35,7 @@ pipeline {
                     ssh peer1 "cd dubbo-demo/ && sh stop.sh"
                     echo "传输jar"
                     scp target/provider.jar peer1:dubbo-demo/provider/
-                    ssh peer1 "cd dubbo-demo/provider/ && sh start.sh"
+                    ssh peer1 "cd dubbo-demo/ && sh start.sh"
                 '''
             }
         }
