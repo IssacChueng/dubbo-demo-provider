@@ -30,9 +30,9 @@ pipeline {
                 sh '''
                     export BUILD_ID=dontKillMe
                     echo "关闭provider"
-                    ssh peer1 "pkill -f dubbo-demo-provider"
-                    echo "传输jar"
                     pwd
+                    ssh peer1
+                    echo "传输jar"
                 '''
             }
         }
