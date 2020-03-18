@@ -37,6 +37,7 @@ public class HelloServiceLocal implements HelloService {
 
         try {
             bufferedReader.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
