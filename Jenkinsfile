@@ -31,7 +31,7 @@ pipeline {
                     export BUILD_ID=dontKillMe
                     echo "关闭provider"
                     pwd
-                    ssh peer1
+                    ssh peer1 "ls"
                     echo "传输jar"
                 '''
             }
