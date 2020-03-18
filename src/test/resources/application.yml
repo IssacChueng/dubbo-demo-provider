@@ -6,7 +6,7 @@ dubbo:
     name: dubbo-demo
     qos-enable: true
   registry:
-    address: zookeeper://127.0.0.1:2290
+    address: zookeeper://master:2290
 
 server:
   port: 8888
