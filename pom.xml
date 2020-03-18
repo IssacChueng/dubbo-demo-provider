@@ -104,7 +104,6 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <outputDirectory>/Users/jeff/test/dubbo</outputDirectory>
                     <mainClass>cn.jeff.study.dubbodemoprovider.DubboDemoProviderApplication</mainClass>
                 </configuration>
             </plugin>
