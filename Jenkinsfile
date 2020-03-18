@@ -32,10 +32,10 @@ pipeline {
                     echo "关闭provider"
                     pwd
                     ls
-                    ssh peer1 "cd dubbo-demo/ && sh stop-provider.sh"
+                    ssh peer1 "cd dubbo-demo/ && sh stop.sh"
                     echo "传输jar"
                     scp target/provider.jar peer1:dubbo-demo/provider/
-                    ssh peer1 "cd dubbo-demo/provider/ && nohup java -jar provider.jar >>/dev/null 2>&1 &"
+                    ssh peer1 "cd dubbo-demo/provider/ && sh start.sh"
                 '''
             }
         }
