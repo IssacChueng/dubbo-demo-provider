@@ -7,6 +7,12 @@ dubbo:
     qos-enable: true
   registry:
     address: zookeeper://master:2290
+  protocol:
+    threads: 300
+  config-center:
+    address: zookeeper://master:2290
+  metadata-report:
+    address: zookeeper://master:2290
 
 server:
   port: 8888
