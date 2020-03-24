@@ -3,3 +3,4 @@ dubbo:
     name: http
     serialization: fastjson
     server: servlet
+    port: ${server.port}
